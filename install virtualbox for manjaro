@@ -1,0 +1,48 @@
+1, install virtual box for manjaro ,please see:
+https://wiki.manjaro.org/index.php?title=Virtualbox
+This is simple way.
+
+2, If have some troubles, Please see:
+  https://www.virtualbox.org/manual/ch01.html#intro-installing
+  https://www.virtualbox.org/manual/ch02.html#install-linux-host
+ 
+--------------------------------------------
+Installing Virtualbox on Manjaro
+1. Enabling Virtualisation
+
+Before installing VirtualBox, it is important to first ensure that virtualization has been enabled in your BIOS. The exact instructions for doing this vary based on your hardware. Please review the manual provided by your computer or motherboard manufacturer for specific instructions.
+
+
+2. Install VirtualBox
+
+To install VirtualBox, you need to install the packages virtualbox and linux*-virtualbox-host-modules. The latter must match the version of the kernel you are running.
+
+
+To install VirtualBox and automatically install the kernel modules for your installed kernels enter the following command in the terminal:
+
+pamac install virtualbox $(pacman -Qsq "^linux" | grep "^linux[0-9]*[-rt]*$" | awk '{print $1"-virtualbox-host-modules"}' ORS=' ') 
+
+
+Once the installation has completed, it will then be necessary to add the VirtualBox Module to your kernel. The easy way is to simply reboot your system. Otherwise, to start using VirtualBox immediately, enter the following command:
+
+sudo vboxreload
+
+
+3.  Install the Extension Pack(Optional)
+
+The virtualbox extension pack is available from Arch User Repositoty(AUR). You can install it with:
+
+pamac build virtualbox-ext-oracle
+
+
+4.  Adding Your Account to the vboxusers User Group
+
+The final step is to now add your personal user account to the vboxusers group. This is necessary in order to fully access the features provided by VirtualBox, including the ability to use USB devices in a Guest operating system.
+
+
+The command to add your user-name to the vboxusers group is:
+
+sudo gpasswd -a $USER vboxusers
+
+
+You must logout for the change to take effect. 
