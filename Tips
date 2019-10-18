@@ -1,0 +1,6 @@
+一，在virtual box 中安装 manjaro guest 的疑难杂症
+1，官方的关于在virtual box的安装方法中，推荐启动virtual box 的 Enabled 3D acceleration。
+  现在查明，开启后，进入virtualbox中的 manjaro guest 系统，下方的任务条会闪烁。
+  多次实验后，关闭 Enabled 3D acceleration，就好了。估计是 Enabled 3D acceleration。的一个bug.
+2,manjaro 官方推荐 virtual box使用 vboxSVGA,现在实测是用是 VMSVGA，这个是系统自动设置的，为了优化改用其它的驱动都不行。
+还是不要动了吧。猜测原因，可能是我的 manjaro guest是已经装的，直接拿来用的。下次新装 manjaro guest的时候再实验下。
