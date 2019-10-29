@@ -1,0 +1,11 @@
+
+
+使用 screenfetch 命令查看
+$ screenfetch
+其中有一行 GPU: Mesa DRI Intel(R) HD Graphics 520 (Skylake GT2) 
+
+百度下 Mesa DRI Intel(R) HD Graphics 520
+https://www.cnblogs.com/EasonJim/p/7383131.html
+可以发现是CPU集成显卡
+------------------------------------
+
