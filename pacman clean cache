@@ -1,0 +1,59 @@
+pacman (简体中文)
+https://wiki.archlinux.org/index.php/Pacman_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E6%B8%85%E7%90%86%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%BC%93%E5%AD%98
+
+
+---------------------------
+清理软件包缓存
+
+
+pacman 将下载的软件包保存在 /var/cache/pacman/pkg/ 并且不会自动移除旧的和未安装版本的软件包，因此需要手动清理，以免该文件夹过于庞大。
+
+使用内建选项即可清除未安装软件包的缓存：
+
+# pacman -Sc
+
+警告:
+
+    仅在确定当前安装的软件包足够稳定且不需要降级时才执行清理。pacman -Sc仅会保留软件包的当前有效版本，旧版本的软件包被清理后，只能从其他地方如 Arch Linux Archive (简体中文)中获取了。
+    pacman -Scc 可以清理所有缓存，但这样 pacman 在重装软件包时就只能重新下载了。除非空间不足，否则不应这么做。
+
+由于以上种种局限，建议使用专门的脚本去处理清理哪些、清理多少缓存：
+
+pacman-contrib 提供的 paccache 命令默认会删除近3个版本前的软件包
+
+# paccache -r
+
+Tip: 可以使用 pacman hooks 自动执行清理，这里是参考示例。
+
+也可以自己设置保留最近几个版本：
+
+# paccache -rk 1
+
+清理所有未安装包的缓存文件，再此运行paccache:
+
+# paccache -ruk0
+
+更多功能参见paccache -h。
+
+paccache，还可以使用 Arch User Repository 中的 pkgcachecleanAUR：
+
+# pkgcacheclean
+
+，以及pacleanerAUR，这两个是未来的替代工具. 
+
+
+------------------
+问题：
+ sudo pacman -Syu 网络不稳定，更新失败
+ 
+ 解决方案：
+ sudo pacman -Sc
+ 清除未安装的软件包
+ 再重新升级 
+ sudo pacman -Syu
+ 
+ ---------------------------------
+ 使用内建选项即可清除未安装软件包的缓存：
+# pacman -Sc
+
+
