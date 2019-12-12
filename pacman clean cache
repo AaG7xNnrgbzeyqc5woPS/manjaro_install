@@ -51,6 +51,7 @@ paccache，还可以使用 Arch User Repository 中的 pkgcachecleanAUR：
  清除未安装的软件包
  再重新升级 
  sudo pacman -Syu
+ --最后，成功！
  
  ---------------------------------
  使用内建选项即可清除未安装软件包的缓存：
