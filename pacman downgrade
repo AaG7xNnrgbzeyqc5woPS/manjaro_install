@@ -1,0 +1,22 @@
+
+如何降级软件包
+https://wiki.archlinux.org/index.php/Downgrading_packages_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+
+
+用pacman对软件包进行降级 
+https://www.theta.live/2017/10/19/%E7%94%A8pacman%E5%AF%B9%E8%BD%AF%E4%BB%B6%E5%8C%85%E8%BF%9B%E8%A1%8C%E9%99%8D%E7%BA%A7/
+
+在 Arch Linux 中降级一个包
+https://linux.cn/article-9730-1.html
+
+------------------------------------
+问题：
+  我的manjaro有个软件包 fontconfig 不知为何，版本比 源还新，每次更新系统就会提示，非常烦人。
+  就想着如何降级，
+  
+  
+解决：
+  研究发现最简单的办法是，使用 pamac图形客户端，reinstall fontconfig包为源中最新的版本。
+  
+  
+  
