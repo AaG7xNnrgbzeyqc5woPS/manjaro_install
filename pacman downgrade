@@ -18,5 +18,26 @@ https://linux.cn/article-9730-1.html
 解决：
   研究发现最简单的办法是，使用 pamac图形客户端，reinstall fontconfig包为源中最新的版本。
   
+---------------
+方法二：
+使用 downgrade 工具
+安装： $sudo pacman -Sy
+      $sudo pacman -S downgrade
+      
+使用：
+  $sudo downgrade fontconfig
+Downgrading from A.L.A. is disabled on the stable branch. To override this behavior, set DOWNGRADE_FROM_ALA to 1 .
+See https://wiki.manjaro.org/index.php?title=Using_Downgrade  for more details.
+
+Available packages:
+
++  1)  fontconfig  2  2.13.1+12+g5f5ec56  1  x86_64  (local)
+-  2)  fontconfig  2  2.13.1+12+g5f5ec56  2  x86_64  (local)
+select a package by number: 
+
+输入你的选择就可以啦，非常方便。
+----------------------
+  
+  
   
   
