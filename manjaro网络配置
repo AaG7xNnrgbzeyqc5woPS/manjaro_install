@@ -1,0 +1,13 @@
+
+1. 最简单的方式是使用GUI, 有两种方式启动
+  a. 在启动菜单里面搜索 network,可以看到 Advanced Network Configuration程序
+    启动它,可以看到Network Connections 控制框.这里设置ip地址,静态动态 都可以,
+    包括DNS
+  b. 右下方的托盘有网络链接的图标,右击可以弹出一个编辑菜单Network Connections,  
+    用来编辑网络配置.
+  
+    
+    
+    
+    
+  
