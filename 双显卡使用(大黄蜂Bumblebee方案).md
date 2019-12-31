@@ -1,6 +1,6 @@
-See:
-  https://wiki.archlinux.org/index.php/Bumblebee
-  https://www.jianshu.com/p/6367d737f349
+### See:
+    https://wiki.archlinux.org/index.php/Bumblebee
+    https://www.jianshu.com/p/6367d737f349
   
 ##  查看当前显卡
     screenfetch  
